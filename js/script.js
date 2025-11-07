@@ -10,7 +10,7 @@ function showSlides() {
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}
     slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 7000); // Cambia de imagen cada 7 segundos
+    setTimeout(showSlides, 7000);
 }
 
 function plusSlides(n) {
@@ -23,7 +23,7 @@ document.getElementById('cargar-mas-btn').addEventListener('click', function() {
     hiddenItems.forEach(function(item) {
         item.classList.remove('hidden');
     });
-    this.style.display = 'none'; // Ocultar el bot  n despu  s de cargar m  s
+    this.style.display = 'none';
 });
 
 function obtenerProductos() {
@@ -65,9 +65,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     })
     .then(response => response.text())
     .then(data => {
-        // Puedes agregar lógica para mostrar un mensaje de éxito o manejar los errores.
         console.log(data);
-        // Redirigir al usuario a la página de configuración de cuenta
         window.location.href = 'http://localhost:8080/configuracion_cuenta.html';
     })
     .catch(error => {

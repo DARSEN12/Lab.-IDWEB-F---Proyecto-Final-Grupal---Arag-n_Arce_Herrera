@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - WILYSAVY</title>
+
+    <!-- Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Tu CSS general -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS del contacto -->
+    <link rel="stylesheet" href="css/contactanos.css">
+</head>
+<body>
+
+    <!-- ========= NAVBAR SUPERIOR (MISMA ESTÉTICA) ========= -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="images/logo2.jpg" alt="Logo" margin-right="900px" height="70px">
+        </div>
+        <nav>
+        <ul class="menu">
+            <li class="left"><a href="index.html">Volver al Inicio</a></li>
+            <li class="right"><a href="productos.html">Ver Productos</a></li>
+            <li class="right"><a href="iniciar_sesion.html">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <section class="contact-hero">
+        <div class="contact-hero-text">
+            <h1>¿Necesitas ayuda?</h1>
+            <p>Estamos aquí para resolver tus dudas y ayudarte con lo que necesites</p>
+        </div>
+    </section>
+
+    <!-- ========= FORMULARIO ========= -->
+    <section class="contact-container">
+        <h2>Formulario de Contacto</h2>
+
+        <form id="contactForm">
+            <div class="campo">
+                <label for="nombre"><i class="fas fa-user"></i> Nombre completo</label>
+                <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+            </div>
+
+            <div class="campo">
+                <label for="correo"><i class="fas fa-envelope"></i> Correo electrónico</label>
+                <input type="email" id="correo" placeholder="ejemplo@gmail.com">
+            </div>
+
+            <div class="campo">
+                <label for="mensaje"><i class="fas fa-comment-dots"></i> Mensaje</label>
+                <textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">
+                <i class="fas fa-paper-plane"></i> Enviar mensaje
+            </button>
+
+            <p id="msg-exito" class="msg-exito"></p>
+        </form>
+    </section>
+    <script src="js/contactanos.js"></script>
+
+</body>
+</html>

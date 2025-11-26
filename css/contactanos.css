@@ -1,0 +1,83 @@
+.contact-hero {
+    background: url('../images/fondo_huellas.jpg') center/cover no-repeat;
+    width: 100%;
+    padding: 120px 20px;
+    text-align: center;
+    color: rgb(8, 8, 8);
+}
+
+.contact-hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.contact-hero-text p {
+    font-size: 1.2rem;
+}
+
+/* CONTENEDOR DEL FORMULARIO */
+.contact-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #c5f5e7;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+/* CAMPOS */
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    font-weight: bold;
+    color: #444;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+/* BOTÓN */
+.btn-enviar {
+    width: 100%;
+    padding: 12px;
+    background: #8f5f5b;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background: #a87874;
+    transform: scale(1.02);
+}
+
+/* MENSAJE DE ÉXITO */
+.msg-exito {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: green;
+}
+
+.logo nav{
+    height: 70px; /* Ajusta la altura del logo */
+    margin-right: 900px; /* Espacio a la derecha del logo */
+}

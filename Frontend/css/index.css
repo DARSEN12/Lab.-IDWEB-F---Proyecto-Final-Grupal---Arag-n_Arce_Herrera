@@ -1,0 +1,144 @@
+/* Frontend/css/index.css */
+
+/* --- Estilos del Menú Móvil --- */
+.menudearriba {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.menudearriba ul { list-style: none; padding: 0; margin: 0; }
+.menudearriba li { padding: 15px; border-bottom: 1px solid #eee; }
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px;
+    display: none; /* Se muestra solo en celular */
+}
+
+@media (max-width: 768px) {
+    .menu-icon { display: block; }
+    nav ul.menu { display: none; } /* Oculta menú normal en celular */
+}
+
+/* --- Slider Principal (Diapositivas) --- */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.text, .text-right {
+    color: #2e8b57;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(255,255,255,0.8);
+    margin-bottom: 10px;
+}
+
+.subtext, .subtext-left {
+    color: #2f4f4f;
+    font-size: 1.2em;
+    line-height: 1.5;
+    background: rgba(255,255,255,0.85);
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Botones Generales */
+.btn-primary {
+    background-color: #2e8b57;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #1c5c39;
+}
+
+/* Flechas del Slider */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 16px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.3s;
+}
+.next { right: 0; border-radius: 3px 0 0 3px; }
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+
+/* --- Carrusel de Productos --- */
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+}
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.producto-item {
+    min-width: 33.33%; /* Muestra 3 productos a la vez */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+.producto-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* --- Ventanas Modales (Login/Registro) --- */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover { color: #000; }

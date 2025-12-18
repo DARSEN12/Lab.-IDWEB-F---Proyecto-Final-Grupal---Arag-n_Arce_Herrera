@@ -93,3 +93,33 @@ def recibir_contacto():
         except Exception as e:
             return jsonify({'success': False, 'message': str(e)}), 500
     return jsonify({'success': False, 'message': 'Error de conexión'}), 500
+
+    # --- RUTA 5: OBTENER LISTA DE MASCOTAS ---
+@api_bp.route('/obtener_mascotas', methods=['GET'])
+def obtener_mascotas():
+    conn = get_db_connection()
+    if conn:
+        cursor = conn.cursor() # Si usas 'dictionary=True' es mejor, pero lo haré estándar
+        try:
+            # Seleccionamos nombre y tipo. (Asumo que tienes un ID autoincremental, si no, ajusta el select)
+            # El orden del SELECT es importante si no usas diccionario
+            query = "SELECT nombre, tipo FROM mascotas ORDER BY id DESC" 
+            cursor.execute(query)
+            datos = cursor.fetchall()
+            
+            # Convertimos la respuesta (que suele ser una tupla) a una lista de diccionarios
+            # Ajusta los índices [0], [1] según el orden de tus columnas en la BD
+            lista_mascotas = []
+            for fila in datos:
+                mascota = {
+                    'nombre': fila[0],
+                    'tipo': fila[1]
+                }
+                lista_mascotas.append(mascota)
+
+            cursor.close()
+            conn.close()
+            return jsonify({'success': True, 'mascotas': lista_mascotas})
+        except Exception as e:
+            return jsonify({'success': False, 'message': str(e)}), 500
+    return jsonify({'success': False, 'message': 'Error de conexión'}), 500

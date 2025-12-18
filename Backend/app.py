@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 from routes import api_bp
-from db import init_db  # <--- Importamos la nueva función
+from db import init_db 
 
 app = Flask(__name__)
 

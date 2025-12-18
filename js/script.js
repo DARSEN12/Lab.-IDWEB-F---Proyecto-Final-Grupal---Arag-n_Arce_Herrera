@@ -1,6 +1,7 @@
 let slideIndex = 0;
 showSlides();
 
+// ---- Cambio de diapositiva en diapositiva (index.html)
 function showSlides() {
     let i;
     let slides = document.getElementsByClassName("mySlides");
@@ -10,9 +11,10 @@ function showSlides() {
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}
     slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 7000); // Cambia de imagen cada 7 segundos
+    setTimeout(showSlides, 10000); // Cambia de imagen cada 10 segundos
 }
 
+// ---- Cambio manual de diapositivas
 function plusSlides(n) {
     slideIndex += n - 1;
     showSlides();

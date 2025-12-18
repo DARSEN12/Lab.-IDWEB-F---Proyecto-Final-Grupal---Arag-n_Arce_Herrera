@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopta o Registra - WilySavi</title>
+    <link rel="stylesheet" href="adopta.css">
+</head>
+<body>
+
+    <header class="header-title">
+        <h1>Centro de Adopción WilySavi</h1>
+        <p>Encuentra a tu nuevo amigo o registra una mascota para buscarle hogar.</p>
+    </header>
+
+    <div class="form-container">
+        <h2>Registrar Mascota</h2>
+        <form id="formRegistro">
+            <div class="form-group">
+                <label for="nombreMascota">Nombre de la Mascota:</label>
+                <input type="text" id="nombreMascota" name="nombreMascota" required placeholder="Ej: Fido">
+            </div>
+
+            <div class="form-group">
+                <label for="tipoMascota">Tipo de Mascota:</label>
+                <select id="tipoMascota" name="tipoMascota" required>
+                    <option value="Perro">Perro</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="correoDuenio">Correo del Dueño:</label>
+                <input type="email" id="correoDuenio" name="correoDuenio" required placeholder="tu@correo.com">
+            </div>
+
+            <div class="form-group">
+                <label for="contrasenaDuenio">Contraseña (para editar después):</label>
+                <input type="password" id="contrasenaDuenio" name="contrasenaDuenio" required placeholder="******">
+            </div>
+
+            <button type="submit" class="submit-btn">Registrar Mascota</button>
+        </form>
+        <p id="mensajeRespuesta" class="message"></p>
+    </div>
+
+    <hr class="divider">
+
+    <h2 style="text-align:center; color:#4a3b32;">Mascotas en Adopción</h2>
+
+    <div class="gallery-container">
+        <div class="pet-card">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1974&auto=format&fit=crop" alt="Perro Beagle">
+            <div class="card-info">
+                <h3>Benji</h3>
+                <p class="breed">Beagle - Perro</p>
+                <p class="description">Juguetón y energético.</p>
+                <button class="adopt-btn">Conocer a Benji</button>
+            </div>
+        </div>
+
+        <div class="pet-card">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2043&auto=format&fit=crop" alt="Gato">
+            <div class="card-info">
+                <h3>Luna</h3>
+                <p class="breed">Mestizo - Gato</p>
+                <p class="description">Tranquila y cariñosa.</p>
+                <button class="adopt-btn">Conocer a Luna</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-button">
+        <a href="index.html">Volver al Inicio</a>
+    </div>
+
+    <footer>
+        <p>Correo: contacto@wilysavi.com</p>
+        <p>© 2025 WilySavi</p>
+    </footer>
+
+    <script src="adopta.js"></script>
+</body>
+</html>

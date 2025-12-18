@@ -34,6 +34,133 @@
         .menu-icon {
             cursor: pointer; /* Cambia el cursor al pasar sobre el icono del menú */
         }
+
+       /* Estilos para los textos del slideshow */
+.text, .text-right {
+    color: #2e8b57;   /* Verde bosque */
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+.subtext, .subtext-left {
+    color: #2f4f4f;   /* Gris carbón (oscuro, elegante) */
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #2e8b57;  /* Verde bosque */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1c5c39;  /* Verde más oscuro */
+}
+
+/*------ Footer general ------*/
+/* Footer general */
+.footer {
+    background-color: #2e8b57;
+    color: #f0f0f0;
+    padding: 25px 0;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.95em;
+}
+
+/* Nombre de la empresa */
+.footer-info h4 {
+    font-size: 2em; /* Mucho más grande */
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+/* Texto legal */
+.footer-info p {
+    font-size: 0.85em;
+    color: #dcdcdc;
+}
+
+/* Títulos de sección */
+.footer-links h4,
+.footer-social h4 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Enlaces útiles con íconos decorativos */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.footer-links ul li::before {
+    content: "➤"; /* Flecha decorativa */
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+.footer-links ul li a {
+    color: #dcdcdc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ffffff;
+}
+
+/* Redes sociales */
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.footer-social ul li a {
+    color: #f0f0f0;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social ul li a:hover {
+    color: #ffffff;
+    transform: scale(1.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-social ul {
+        justify-content: center;
+    }
+}
+
     </style>
 
 <script>
@@ -128,40 +255,54 @@
     </nav>
 
     <!-- Presentación de Diapositivas -->
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="images/dog.jpg" style="width:100%">
-            <div class="text">Encuentra a tu mejor amigo</div>
-            <button class="btn-primary adopt-btn">Adopta</button>
-            <div class="subtext">Ya tienes una mascota? <br> Conózcanse ambos a nuestra comunidad</div>
-            <button class="btn-primary slide-btn">Únete</button>
-        </div>
-        <div class="mySlides fade">
-            <img src="images/diapositiva1.jpg" style="width:100%">
-            <div class="text">Encuentra a tu mejor amigo</div>
-            <button class="btn-primary adopt-btn">Adopta</button>
-            <div class="subtext">Ya tienes una mascota? <br> Conózcanse ambos a nuestra comunidad</div>
-            <button class="btn-primary slide-btn">Únete</button>
-        </div>
-        <div class="mySlides fade">
-            <img src="images/diapositiva2.jpg" style="width:100%">
-            <div class="text">Todo lo que necesitas para tu mascota</div>
-            <div class="subtext">- Cuidado Integral <br> - Entretenimiento <br> - Atención veterinaria</div>
-            <button class="btn-primary slide-btn">Servicios</button>
-            <div class="subtext-left">- Estilo y Comodidad <br> - Alimentación y Nutrición <br> - Salud e Higiene</div>
-            <button class="btn-primary product-btn">Productos</button>
-        </div>
-        <div class="mySlides fade">
-            <img src="images/diapositiva3.jpg" style="width:100%">
-            <div class="text-right">Participa en nuestras actividades</div>
-            <button class="btn-primary event-btn">Eventos</button>
-            <div class="subtext">OBTEN BENEFICIOS EXCLUSIVOS <br> Disfruta de Actividades y Charlas Informativas <br> No te lo pierdas!</div>
-        </div>
+<div class="slideshow-container">
 
-        <!-- Flechas de navegación -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- Diapositiva 1 -->
+    <div class="mySlides fade">
+        <img src="images/dog.jpg" style="width:100%">
+        <div class="text">Encuentra a tu compañero ideal</div>
+        <button class="btn-primary adopt-btn">Adopta ahora</button>
+        <div class="subtext">¿Ya tienes mascota?<br> Únete a nuestra comunidad y comparte su historia</div>
+        <button class="btn-primary slide-btn">Únete</button>
     </div>
+
+    <!-- Diapositiva 2 -->
+    <div class="mySlides fade">
+        <img src="images/diapositiva2.jpg" style="width:100%">
+        <div class="text">Todo para el bienestar de tu mascota</div>
+        
+        <div class="subtext">
+            ✨ Cuidado integral <br>
+            🎮 Diversión asegurada <br>
+            🩺 Atención veterinaria
+        </div>
+        <button class="btn-primary slide-btn">Descubre nuestros servicios</button>
+
+        <div class="subtext-left">
+            👗 Estilo y comodidad <br>
+            🥗 Alimentación saludable <br>
+            🧼 Higiene y salud
+        </div>
+        <button class="btn-primary product-btn">Explora productos</button>
+    </div>
+
+    <!-- Diapositiva 3 -->
+    <div class="mySlides fade">
+        <img src="images/diapositiva3.jpg" style="width:100%">
+        <div class="text-right">Vive experiencias únicas con tu mascota</div>
+        <button class="btn-primary event-btn">Participa en eventos</button>
+        <div class="subtext">
+            ⭐ Beneficios exclusivos <br>
+            📚 Charlas informativas <br>
+            🎊 Actividades imperdibles
+        </div>
+    </div>
+
+    <!-- Flechas de navegación -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
 
     <!-- Sección de Productos -->
     <div class="productos-seccion">
@@ -324,33 +465,42 @@
     </script>
     
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <p>&copy; 2024 WilySavy Group, Inc.</p>
-                </div>
-                <div class="col">
-                    <ul>
-                        <li><a href="#">Quienes somos?</a></li>
-                        <li><a href="#">Politicas-cookies</a></li>
-                        <li><a href="#">Ubicaciones-Sedes</a></li>
-                        
-                    </ul>
-                </div>
-                <div class="col">
-                    <ul class="social-media">
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitch"></i></a></li>
-                        <li><a href="#"><i class="fab fa-github"></i></a></li>
-                    </ul>
-                </div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            
+            <!-- Columna 1 -->
+            <div class="col footer-info">
+                <h4>WilySavy Group, Inc.</h4>
+                <p>&copy; 2025 Todos los derechos reservados</p>
+            </div>
+            
+            <!-- Columna 2 -->
+            <div class="col footer-links">
+                <h4>Enlaces útiles</h4>
+                <ul>
+                    <li><a href="#">¿Quiénes somos?</a></li>
+                    <li><a href="#">Políticas de cookies</a></li>
+                    <li><a href="#">Ubicaciones y sedes</a></li>
+                </ul>
+            </div>
+            
+            <!-- Columna 3 -->
+            <div class="col footer-social">
+                <h4>Síguenos</h4>
+                <ul class="social-media">
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitch"></i></a></li>
+                    <li><a href="#"><i class="fab fa-github"></i></a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
+
 </body>
 </html>

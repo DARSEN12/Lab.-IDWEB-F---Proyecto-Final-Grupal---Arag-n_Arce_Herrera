@@ -6,7 +6,7 @@ document.getElementById('registroMascotaForm').addEventListener('submit', functi
     const correoDuenio = document.getElementById('correoDuenio').value;
     const contrasenaDuenio = document.getElementById('contrasenaDuenio').value;
 
-    fetch('http://localhost:3000/registro_mascota', {
+    fetch('http://127.0.0.1:5000/registro_mascota', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

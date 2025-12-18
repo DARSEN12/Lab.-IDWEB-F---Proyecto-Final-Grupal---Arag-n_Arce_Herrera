@@ -11,11 +11,7 @@ function showSlides() {
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}
     slides[slideIndex-1].style.display = "block";
-<<<<<<< HEAD:Frontend/js/script.js
     setTimeout(showSlides, 10000); // Cambia de imagen cada 10 segundos
-=======
-    setTimeout(showSlides, 7000);
->>>>>>> 9365bcc3441be5f2b8742c6df1849a7a970b4829:js/script.js
 }
 
 // ---- Cambio manual de diapositivas
@@ -33,7 +29,7 @@ document.getElementById('cargar-mas-btn').addEventListener('click', function() {
 });
 
 function obtenerProductos() {
-    fetch('http://localhost:3000/api/productos')
+    fetch('http://127.0.0.1:5000/api/productos')
         .then(response => response.json())
         .then(data => {
             mostrarProductos(data);
@@ -65,7 +61,7 @@ document.addEventListener('DOMContentLoaded', obtenerProductos);
 document.getElementById('registerForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const formData = new FormData(this);
-    fetch('http://localhost:8000/cgi-bin/registro.cgi', {
+    fetch('http://127.0.0.1:5000/registro_usuario', {
         method: 'POST',
         body: formData
     })

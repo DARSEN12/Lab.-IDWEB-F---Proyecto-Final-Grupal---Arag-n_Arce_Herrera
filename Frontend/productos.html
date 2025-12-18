@@ -299,68 +299,13 @@ body {
     </div>
 </div>
 
+<div class="productos-galeria">
+        </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const productos = [
-            {
-                nombre: "Arnés y Correa Azul",
-                precio: 45.90,
-                imagen_ruta: "images/arnes_correa_collar.jpg"
-            },
-            {
-                nombre: "Platos Plásticos para Mascotas",
-                precio: 12.50,
-                imagen_ruta: "images/platos_colores.jpg"
-            },
-            {
-                nombre: "Whiskas Atún y Sardina 85g",
-                precio: 4.90,
-                imagen_ruta: "images/whiskas_atun_sardina.jpg"
-            },
-            {
-                nombre: "Purina Dog Chow EXTRALIFE",
-                precio: 89.00,
-                imagen_ruta: "images/purina_dog_chow.jpg"
-            },
-            {
-                nombre: "Transportadora para Gatos",
-                precio: 65.00,
-                imagen_ruta: "images/transportadora_gato.jpg"
-            },
-            {
-                nombre: "Cepillo Rosa para Gatos",
-                precio: 18.90,
-                imagen_ruta: "images/cepillo_gato.jpg"
-            },
-            {
-                nombre: "Rascador y Condominio para Gatos",
-                precio: 120.00,
-                imagen_ruta: "images/rascador_gato.jpg"
-            },
-            {
-                nombre: "Juguete Ratón de Peluche",
-                precio: 9.50,
-                imagen_ruta: "images/juguete_raton.jpg"
-            }
-        ];
+    <script src="js/productos.js"></script>
+</body>
+</html>
 
-        const productosGaleria = document.querySelector('.productos-galeria');
-        productosGaleria.innerHTML = ''; // Limpiar contenido anterior
-
-        productos.forEach(producto => {
-            const productoDiv = document.createElement('div');
-            productoDiv.classList.add('producto-card');
-            productoDiv.innerHTML = `
-                <img src="${producto.imagen_ruta}" alt="${producto.nombre}">
-                <h4>${producto.nombre}</h4>
-                <p>S/ ${producto.precio.toFixed(2)}</p>
-                <a href="#" class="btn-comprar">Comprar</a>
-            `;
-            productosGaleria.appendChild(productoDiv);
-        });
-    });
-</script>
 <!-- Footer -->
 <footer class="footer">
     <div class="container">

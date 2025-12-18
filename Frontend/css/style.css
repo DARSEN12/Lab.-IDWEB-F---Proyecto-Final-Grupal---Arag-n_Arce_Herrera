@@ -37,9 +37,9 @@ header {
 /* Icono para mostrar/ocultar el menú */
 .menu-icon {
     position: fixed;
-    top: 600px; /* Ajusta según sea necesario */
+/* Comentario: Ajusta esta propiedad para cambiar la separación entre el menú principal y el superior */    top: 600px;
     left: 20px; /* Espacio desde el borde izquierdo */
-    cursor: pointer;
+    cursor: pointer;  /* Ajusta según sea necesario */
     font-size: 24px; /* Tamaño del icono */
     color: black; /* Color del icono */
     z-index: 1200; /* Asegúrate de que esté por encima del menú */
@@ -85,7 +85,7 @@ nav {
     border-bottom: 1px solid #ccc;
 }
 
-/* Comentario: Ajusta esta propiedad para cambiar la separación entre el menú principal y el superior */
+
 nav {
     margin-top: 20px; /* Cambiar el valor aquí para ajustar la separación */
 }
@@ -104,7 +104,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #c81d1d;
     font-size: 14px;
     padding: 5px 10px;
     border: 1px solid transparent;
@@ -112,8 +112,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    border: 1px solid #000;
+    border: 1px;
     border-radius: 3px;
+    text-decoration: none;
+    background-color: #85f0fe;
+    padding: 8px;
+    border-radius: 8px;
 }
 
 /* Estilos para el menú desplegable */
@@ -461,7 +465,7 @@ nav ul li a:hover {
 }
 
 header {
-    background: url('background_image.jpg') no-repeat center center; /* Asegúrate de tener una imagen de fondo */
+    background: url('css/fondo_huellas.jpg') no-repeat center center; /* Asegúrate de tener una imagen de fondo */
     background-size: cover;
     height: 50px; /* Altura del encabezado */
     display: flex;

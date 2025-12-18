@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evidencias</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 20px 30px;
+      text-align: left;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .evidencias-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .evidencia-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .evidencia-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .evidencia-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .evidencia-card .contenido {
+      padding: 15px;
+    }
+
+    .evidencia-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .evidencia-card p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    /* Botón volver */
+    .volver {
+      display: block;
+      width: fit-content;
+      margin: 40px auto;
+      padding: 12px 24px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .volver:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Evidencias</header>
+
+  <div class="evidencias-container">
+    <div class="evidencia-card">
+      <img src="images/evidencia1.jpg" alt="Evidencia de proyecto 1">
+      <div class="contenido">
+        <h3>Captura del Proyecto A</h3>
+        <p>Imagen que muestra la interfaz inicial del proyecto.</p>
+      </div>
+    </div>
+
+    <div class="evidencia-card">
+      <img src="images/evidencia2.jpg" alt="Evidencia de proyecto 2">
+      <div class="contenido">
+        <h3>Prueba de Funcionalidad</h3>
+        <p>Registro de pruebas realizadas para validar el sistema.</p>
+      </div>
+    </div>
+
+    <div class="evidencia-card">
+      <img src="images/evidencia3.jpg" alt="Evidencia de proyecto 3">
+      <div class="contenido">
+        <h3>Documentación Adjunta</h3>
+        <p>Fragmento de documentación técnica como evidencia del trabajo.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón para volver al inicio -->
+  <a href="index.html" class="volver">⬅ Volver al Inicio</a>
+
+</body>
+</html>

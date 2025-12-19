@@ -1,0 +1,65 @@
+├───.vscode
+│       settings.json
+│
+├───Backend
+│   │   app.py
+│   │   db.py
+│   │   routes.py
+│   │
+│   └───__pycache__
+│           db.cpython-314.pyc
+│           routes.cpython-314.pyc
+│
+└───Frontend
+    │   acerca_de_nosotros.html
+    │   adopta.html
+    │   agregar_producto.html
+    │   contactanos.html
+    │   evidencias.html
+    │   index.html
+    │   productos.html
+    │   proyectos.html
+    │
+    ├───css
+    │       acerca_de_nosotros.css
+    │       adopta.css
+    │       contactanos.css
+    │       evidencias.css
+    │       index.css
+    │       proyectos.css
+    │       style.css
+    │
+    ├───images
+    │       arnes_correa_collar.jpg
+    │       cepillo_gato.jpg
+    │       clinicaveterinaria.jpg
+    │       diapositiva1.jpg
+    │       diapositiva2.jpg
+    │       diapositiva3.jpg
+    │       dog.jpg
+    │       evidencia1.jpg
+    │       evidencia2.jpg
+    │       evidencia3.jpg
+    │       fondo_huellas.jpg
+    │       jaula_conejos.jpg
+    │       juguete_raton.jpg
+    │       logo.jpg
+    │       logo2.jpg
+    │       mascotas_contactos.jpg
+    │       platos_colores.jpg
+    │       proyecto1.jpg
+    │       proyecto2.jpg
+    │       proyecto3.jpg
+    │       purina_dog_chow.jpg
+    │       rascador_gato.jpg
+    │       sobre-nosotros.jpg
+    │       tienda_online.jpg
+    │       transportadora_gato.jpg
+    │       whiskas_atun_sardina.jpg
+    │
+    └───js
+            adopta.js
+            contactanos.js
+            index.js
+            productos.js
+            script.js
